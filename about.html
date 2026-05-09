@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Me — Muhammad Abid</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* ── PHOTO SECTION ── */
+    .about-hero {
+      position:relative; z-index:1;
+      padding:120px 8% 60px;
+      display:grid; grid-template-columns:auto 1fr; gap:4rem; align-items:center;
+      border-bottom:1px solid var(--border);
+    }
+    .photo-frame {
+      width:200px; height:200px; border-radius:50%;
+      border:3px solid var(--teal);
+      box-shadow:0 0 40px rgba(0,212,177,0.25);
+      background:var(--bg3);
+      display:flex; align-items:center; justify-content:center;
+      overflow:hidden; flex-shrink:0;
+      font-size:5rem;
+    }
+    /* ── To add your photo: replace the emoji below with: ──
+       <img src="photo.jpg" alt="Muhammad Abid" style="width:100%;height:100%;object-fit:cover;">
+       Then put your photo.jpg file in the same folder as this page. ── */
+    .about-info .greeting {
+      font-family:'Space Mono',monospace; font-size:0.78rem;
+      letter-spacing:0.14em; color:var(--teal); margin-bottom:0.8rem;
+      text-transform:uppercase;
+    }
+    .about-info h1 {
+      font-size:clamp(1.8rem,3.5vw,2.8rem); font-weight:700;
+      color:#fff; line-height:1.2;
+    }
+    .about-info h1 span { color:var(--teal); }
+    .about-info .subtitle {
+      font-size:1rem; color:var(--muted); margin-top:0.6rem;
+    }
+    .about-info .quote-line {
+      margin-top:1.2rem; font-style:italic;
+      font-size:0.92rem; color:rgba(0,212,177,0.75);
+      border-left:2px solid var(--teal); padding-left:1rem;
+    }
+    .about-info .contact-pills { margin-top:1.4rem; display:flex; flex-wrap:wrap; gap:0.6rem; }
+    .about-info .contact-pills a {
+      font-size:0.78rem; font-family:'Space Mono',monospace;
+      padding:5px 14px; border-radius:20px;
+      background:rgba(0,212,177,0.08); color:var(--teal);
+      border:1px solid rgba(0,212,177,0.2); text-decoration:none;
+      transition:background 0.2s;
+    }
+    .about-info .contact-pills a:hover { background:rgba(0,212,177,0.18); }
+
+    /* ── Currently Learning ── */
+    .learning-grid { display:flex; flex-wrap:wrap; gap:0.6rem; }
+    .learn-pill {
+      display:flex; align-items:center; gap:8px;
+      background:rgba(0,212,177,0.07); border:1px solid var(--border);
+      border-radius:8px; padding:10px 16px;
+      font-size:0.84rem; color:var(--text);
+    }
+    .learn-pill span { color:var(--teal); font-size:1rem; }
+
+    /* ── Interests ── */
+    .interest-list { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:0.8rem; }
+    .interest-item {
+      display:flex; align-items:center; gap:0.8rem;
+      background:var(--card); border:1px solid var(--border);
+      border-radius:10px; padding:0.9rem 1.2rem;
+      font-size:0.88rem; color:var(--text);
+    }
+    .interest-item .int-icon { font-size:1.3rem; }
+
+    /* ── Education card ── */
+    .edu-card {
+      background:var(--card); border:1px solid var(--border);
+      border-radius:14px; padding:2rem;
+      display:flex; gap:1.5rem; align-items:flex-start;
+    }
+    .edu-icon { font-size:2.5rem; flex-shrink:0; }
+    .edu-body h3 { font-size:1.05rem; font-weight:700; color:#fff; }
+    .edu-body .edu-inst { font-size:0.84rem; color:var(--teal); font-family:'Space Mono',monospace; margin:4px 0; }
+    .edu-body .edu-date { font-size:0.78rem; color:var(--muted); margin-bottom:0.8rem; }
+    .edu-body .gpa {
+      display:inline-flex; align-items:center; gap:6px;
+      background:rgba(245,200,66,0.12); color:var(--gold);
+      border:1px solid rgba(245,200,66,0.25); border-radius:6px;
+      font-family:'Space Mono',monospace; font-size:0.8rem; padding:4px 12px;
+    }
+
+    @media (max-width:640px) {
+      .about-hero { grid-template-columns:1fr; gap:2rem; }
+      .photo-frame { width:150px; height:150px; font-size:3.5rem; }
+    }
+  </style>
+</head>
+<body>
+<canvas id="starfield"></canvas>
+
+<nav>
+  <a class="logo" href="index.html">Fusion<span>Abid</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="physics.html">Physics</a></li>
+    <li><a href="aiml.html">AI / ML</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ══ ABOUT HERO ══ -->
+<div class="about-hero">
+  <div class="photo-frame">
+    <!-- ✏️ EDIT: Replace this emoji with your photo.
+         Step 1: Put your photo file (e.g. photo.jpg) in the same folder.
+         Step 2: Replace the 👨‍🔬 below with:
+         <img src="photo.jpg" alt="Muhammad Abid" style="width:100%;height:100%;object-fit:cover;">
+    -->
+    👨‍🔬
+  </div>
+  <div class="about-info">
+    <p class="greeting">Hello, World — I'm</p>
+    <h1>Muhammad <span>Abid</span></h1>
+    <p class="subtitle">Physics Graduate · AI Enthusiast · Avid Supporter of Science &amp; Technology</p>
+    <p class="quote-line">"Traveling the universe with Physics and shaping the future with Artificial Intelligence."</p>
+    <div class="contact-pills">
+      <a href="mailto:muhammadabid7797990@gmail.com">✉️ Email Me</a>
+      <a href="https://www.linkedin.com/feed/" target="_blank">🔗 LinkedIn</a>
+      <a href="tel:+923225982690">📞 (+92) 3225982690</a>
+      <a href="#" >📍 Gujranwala, Pakistan</a>
+    </div>
+  </div>
+</div>
+
+<!-- ══ BIO ══ -->
+<section>
+  <p class="section-tag">My Story</p>
+  <h2 class="section-title">Who <span>Am I?</span></h2>
+  <div style="max-width:760px;">
+    <p style="font-size:1rem; color:var(--text); margin-bottom:1.2rem;">
+      Hi, my name is <strong style="color:var(--teal);">Muhammad Abid</strong> and I am a Physics graduate,
+      an AI enthusiast and an avid supporter of the future of science and technology.
+    </p>
+    <p style="font-size:0.95rem; color:var(--muted); margin-bottom:1.2rem;">
+      After my Bachelor of Science in Physics from the University of Education, Lahore, I have done professional
+      study and self-driven research in Artificial Intelligence, Machine Learning, and Deep Learning —
+      earning fully-funded scholarships from Microsoft, NAVTTC (Prime Minister of Pakistan), and the US Coding School.
+    </p>
+    <p style="font-size:0.95rem; color:var(--muted); margin-bottom:1.2rem;">
+      My journey has taken me from laser labs and plasma diagnostics to pelletron accelerators and AI research institutes,
+      working with institutions like GCU Lahore, UET Lahore, and even SPARCO — Pakistan's space agency.
+    </p>
+    <p style="font-size:0.95rem; color:var(--muted);">
+      My goal with <strong style="color:var(--teal);">FusionAbid</strong> is to meld science with AI to produce
+      projects, research concepts, educational material, and futuristic solutions that make difficult concepts
+      accessible to all. I believe the future belongs to those who can combine:
+      <em style="color:var(--gold);">Physics + Intelligence + Creativity.</em>
+    </p>
+  </div>
+</section>
+
+<!-- ══ INTERESTS ══ -->
+<section style="padding-top:0;">
+  <p class="section-tag">Passions</p>
+  <h2 class="section-title">My <span>Interests</span></h2>
+  <div class="interest-list">
+    <!-- ✏️ EDIT: Add or remove interests here -->
+    <div class="interest-item"><span class="int-icon">🌊</span> Plasma Physics</div>
+    <div class="interest-item"><span class="int-icon">🔬</span> Lasers &amp; Fusion Energy</div>
+    <div class="interest-item"><span class="int-icon">🤖</span> Artificial Intelligence</div>
+    <div class="interest-item"><span class="int-icon">📊</span> Machine Learning &amp; Deep Learning</div>
+    <div class="interest-item"><span class="int-icon">💻</span> Scientific Simulations</div>
+    <div class="interest-item"><span class="int-icon">🚀</span> Future Technologies</div>
+    <div class="interest-item"><span class="int-icon">⚛️</span> Quantum Computing</div>
+    <div class="interest-item"><span class="int-icon">🌌</span> Astrophysics &amp; Astronomy</div>
+  </div>
+</section>
+
+<!-- ══ EDUCATION ══ -->
+<section style="padding-top:0;">
+  <p class="section-tag">Academic Background</p>
+  <h2 class="section-title"><span>Education</span></h2>
+  <div class="edu-card">
+    <div class="edu-icon">🎓</div>
+    <div class="edu-body">
+      <h3>Bachelor of Science in Physics</h3>
+      <p class="edu-inst">University of Education, Lahore (Faisalabad Campus), Pakistan</p>
+      <p class="edu-date">October 2018 — August 2022</p>
+      <span class="gpa">⭐ GPA: 3.71 / 4.0</span>
+      <p style="margin-top:1rem; font-size:0.85rem; color:var(--muted);">
+        Core subjects: Nuclear Physics I &amp; II · Computational Physics · Quantum Mechanics (Intro &amp; Advanced) ·
+        Mathematical Methods of Physics · Statistical Physics · Solid-State Physics · Modern Physics ·
+        Calculus I–III · ODEs · Analytical Geometry · Electronic &amp; Physics Labs
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ══ EXPERIENCE TIMELINE ══ -->
+<section style="padding-top:0;">
+  <p class="section-tag">Experience</p>
+  <h2 class="section-title">Research &amp; Work <span>Timeline</span></h2>
+  <div class="timeline">
+
+    <!-- ✏️ EDIT: Each timeline-item = one job/position. Change dates, title, org, and bullets as needed -->
+    <div class="timeline-item">
+      <div class="tl-date">Apr 2025 – Jan 2026</div>
+      <div class="tl-dot"></div>
+      <div class="tl-content">
+        <h3>Research Assistant — Accelerator Lab</h3>
+        <p class="tl-org">Center for Advanced Studies in Physics (CASP), GCU Lahore | Supervisor: Dr. Ghulam Murtaza</p>
+        <ul>
+          <li>Used pelletron accelerator for ion beam generation and surface modification of acrylic polymer</li>
+          <li>Wrote machine performance check reports regularly for particle accelerator facilities</li>
+          <li>Preservation of Cockcroft-Walton particle accelerator at High Tension Laboratory</li>
+          <li>Liaised with researchers and engineers of the lab</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="tl-date">Aug 2024 – Mar 2025</div>
+      <div class="tl-dot"></div>
+      <div class="tl-content">
+        <h3>Physics Lecturer</h3>
+        <p class="tl-org">GC University, Lahore | Vice Chancellor: Dr. Shazia Bashir (Senior Scientist of Physics)</p>
+        <ul>
+          <li>Taught Radioactivity &amp; Decay, Radiation Exposure &amp; Safety, Radiation Detectors</li>
+          <li>Delivered lectures on Standard Model of Physics, Force carriers, Particle Accelerators</li>
+          <li>Scientific reporting and documentation of Physics lab; practical sessions on radiation detectors</li>
+          <li>Coordinated with faculty to discuss research opportunities for young students</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="tl-date">Jul 2023 – Jul 2024</div>
+      <div class="tl-dot"></div>
+      <div class="tl-content">
+        <h3>Research Assistant</h3>
+        <p class="tl-org">Al-Khwarizmi Institute of Computer Science (KICS), UET Lahore | Supervisor: Mr. Shaheryar Farooq</p>
+        <ul>
+          <li>Utilized ML algorithms, probabilistic modelling, and statistical inference on physics datasets</li>
+          <li>Designed and implemented supervised and unsupervised ML pipelines in Python for simulation</li>
+          <li>Applied neural network architectures for feature extraction from high-dimensional sensor data</li>
+          <li>Benchmarked AI models against traditional physics methods, improving prediction accuracy</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="tl-date">Jan 2023 – Jun 2023</div>
+      <div class="tl-dot"></div>
+      <div class="tl-content">
+        <h3>Research Intern</h3>
+        <p class="tl-org">University of Engineering and Technology, Lahore | Supervisor: Mr. Owais (AI Engineer)</p>
+        <ul>
+          <li>Led data analysis projects using Python (NumPy, Pandas, Matplotlib, Scikit-learn)</li>
+          <li>Explored Quantum Computing fundamentals</li>
+          <li>Built automated data pipelines for high-throughput experimental results</li>
+          <li>Collaborated on cross-disciplinary projects linking computational methods</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="tl-date">Jul 2021 – Aug 2022</div>
+      <div class="tl-dot"></div>
+      <div class="tl-content">
+        <h3>Research Assistant — Laser Lab</h3>
+        <p class="tl-org">University of Education, Lahore (Faisalabad Campus) | Supervisor: Dr. Zahid Farooq (Head of Physics)</p>
+        <ul>
+          <li>Conducted nail analysis of cancer patients using Laser Induced Breakdown Spectroscopy (LIBS)</li>
+          <li>Performed simulations of LIBS setup using Python and Machine Learning</li>
+          <li>Captured X-rays from photon-particle collisions and calculated energies via CRO</li>
+          <li>Mentored junior students in experimental physics, lasers, and plasma diagnostics</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ VOLUNTEERING ══ -->
+<section style="padding-top:0;">
+  <p class="section-tag">Community</p>
+  <h2 class="section-title"><span>Volunteering</span></h2>
+  <div class="cards-grid">
+    <div class="card">
+      <div class="card-icon">⚗️</div>
+      <h3>Secretary — Jones Physics Society</h3>
+      <p>GC University, Lahore · Apr 2025 – Aug 2025<br/>Organized events, seminars and conferences; established relations between students and technical institutions.</p>
+      <span class="card-tag">Leadership</span>
+    </div>
+    <div class="card">
+      <div class="card-icon">🎤</div>
+      <h3>Member — Debating Society</h3>
+      <p>GC University, Lahore · Sep 2025 – Jan 2026<br/>Built public speaking, debating, and leadership skills; focused on igniting change and engaging young minds.</p>
+      <span class="card-tag">Public Speaking</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══ VISION ══ -->
+<section style="padding-top:0;">
+  <p class="section-tag">Vision</p>
+  <h2 class="section-title">My <span>Mission</span></h2>
+  <div style="max-width:680px;">
+    <p style="font-size:0.97rem; color:var(--muted); margin-bottom:1rem;">
+      FusionAbid exists to <strong style="color:var(--text);">meld science with AI</strong> —
+      producing projects, research concepts, educational material, and futuristic solutions that
+      make difficult concepts accessible to everyone.
+    </p>
+    <p style="font-size:0.97rem; color:var(--muted); margin-bottom:1.4rem;">
+      I believe the future belongs to those who can bridge:
+    </p>
+    <div class="learning-grid" style="margin-bottom:2rem;">
+      <div class="learn-pill"><span>⚛️</span> Physics</div>
+      <div class="learn-pill"><span>➕</span></div>
+      <div class="learn-pill"><span>🧠</span> Intelligence</div>
+      <div class="learn-pill"><span>➕</span></div>
+      <div class="learn-pill"><span>🎨</span> Creativity</div>
+    </div>
+
+    <p class="section-tag" style="margin-bottom:0.8rem;">What I Am Learning Today</p>
+    <div class="learning-grid">
+      <!-- ✏️ EDIT: Update these as your learning changes -->
+      <div class="learn-pill"><span>🤖</span> Generative AI</div>
+      <div class="learn-pill"><span>🌊</span> Plasma Physics</div>
+      <div class="learn-pill"><span>🌌</span> Quantum Computing</div>
+      <div class="learn-pill"><span>☁️</span> Azure AI Services</div>
+      <div class="learn-pill"><span>🧠</span> Deep Learning Projects</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 <a href="index.html">Muhammad Abid</a> · Physics &amp; AI Researcher · Gujranwala, Pakistan</p>
+  <div class="footer-links">
+    <a href="mailto:muhammadabid7797990@gmail.com">Email</a>
+    <a href="https://www.linkedin.com/feed/" target="_blank">LinkedIn</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</footer>
+<script src="stars.js"></script>
+</body>
+</html>

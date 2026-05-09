@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FusionAbid — Muhammad Abid | Physics & AI Researcher</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    #hero {
+      position:relative; z-index:1;
+      min-height:100vh; display:flex; align-items:center;
+      padding:100px 8% 60px;
+    }
+    .hero-content { max-width:700px; }
+    .badge {
+      display:inline-flex; align-items:center; gap:8px;
+      background:rgba(0,212,177,0.10); border:1px solid var(--border);
+      color:var(--teal); font-size:0.76rem; letter-spacing:0.1em;
+      padding:6px 16px; border-radius:40px;
+      font-family:'Space Mono',monospace; margin-bottom:1.6rem;
+      animation:fadeUp 0.6s ease both;
+    }
+    .badge::before { content:''; width:7px; height:7px; background:var(--teal); border-radius:50%; animation:pulse 2s infinite; }
+    h1 { font-size:clamp(2.4rem,5vw,4rem); font-weight:700; line-height:1.12; color:#fff; animation:fadeUp 0.7s 0.1s ease both; }
+    h1 .accent { color:var(--teal); }
+    h1 .gold   { color:var(--gold); }
+    .tagline { margin-top:1.2rem; font-size:1.05rem; color:var(--muted); max-width:540px; animation:fadeUp 0.7s 0.2s ease both; }
+    .quote { margin-top:1.4rem; font-style:italic; font-size:0.92rem; color:rgba(0,212,177,0.75); border-left:2px solid var(--teal); padding-left:1rem; animation:fadeUp 0.7s 0.25s ease both; }
+    .hero-cta { margin-top:2rem; display:flex; gap:1rem; flex-wrap:wrap; animation:fadeUp 0.7s 0.3s ease both; }
+    .hero-pills { margin-top:1.8rem; display:flex; gap:0.6rem; flex-wrap:wrap; animation:fadeUp 0.7s 0.35s ease both; }
+    .pages-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1rem; }
+    .page-link { display:flex; align-items:center; justify-content:space-between; background:var(--card); border:1px solid var(--border); border-radius:10px; padding:1.2rem 1.4rem; text-decoration:none; color:var(--text); font-size:0.9rem; transition:border-color 0.2s,background 0.2s; }
+    .page-link:hover { border-color:var(--teal); background:rgba(0,212,177,0.06); }
+    .page-link .arrow { color:var(--teal); }
+  </style>
+</head>
+<body>
+<canvas id="starfield"></canvas>
+
+<nav>
+  <a class="logo" href="index.html">Fusion<span>Abid</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="physics.html">Physics</a></li>
+    <li><a href="aiml.html">AI / ML</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<section id="hero">
+  <div class="hero-content">
+    <div class="badge">OPEN TO SCHOLARSHIPS &amp; INTERNATIONAL COLLABORATIONS</div>
+    <h1>Hi, I'm<br/><span class="accent">Muhammad</span> <span class="gold">Abid</span></h1>
+    <p class="tagline">BSc Physics · Diplomas in AI, ML &amp; Deep Learning · Bridging Quantum Physics with Artificial Intelligence.</p>
+    <p class="quote">"Traveling the universe with Physics and shaping the future with Artificial Intelligence."</p>
+    <div class="hero-cta">
+      <a class="btn-primary" href="about.html">About Me</a>
+      <a class="btn-outline" href="aiml.html">View Projects</a>
+      <a class="btn-outline" href="contact.html">Contact Me</a>
+    </div>
+    <div class="hero-pills">
+      <span class="pill">⚛️ Plasma Physics</span>
+      <span class="pill">🔬 Lasers &amp; Fusion</span>
+      <span class="pill">🤖 Machine Learning</span>
+      <span class="pill">🧠 Deep Learning</span>
+      <span class="pill">💻 Simulations</span>
+      <span class="pill">🌌 Quantum Computing</span>
+    </div>
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div class="stat"><div class="stat-num">3.71</div><div class="stat-label">GPA — BSc Physics</div></div>
+  <div class="stat"><div class="stat-num">5</div><div class="stat-label">Scholarships Won</div></div>
+  <div class="stat"><div class="stat-num">4</div><div class="stat-label">International Conferences</div></div>
+  <div class="stat"><div class="stat-num">5+</div><div class="stat-label">Research Positions</div></div>
+  <div class="stat"><div class="stat-num">5</div><div class="stat-label">Int'l Courses</div></div>
+</div>
+
+<section>
+  <p class="section-tag">What I Do</p>
+  <h2 class="section-title">Areas of <span>Expertise</span></h2>
+  <div class="cards-grid">
+    <div class="card"><div class="card-icon">⚛️</div><h3>Quantum Physics</h3><p>Advanced Quantum Mechanics, QFT, Standard Model, and the deep fabric of the universe.</p><span class="card-tag">Physics</span></div>
+    <div class="card"><div class="card-icon">🌊</div><h3>Plasma Physics &amp; Lasers</h3><p>LIBS plasma diagnostics, Nd:YAG laser pulse analysis, plasma spectroscopy for cancer research.</p><span class="card-tag">Physics</span></div>
+    <div class="card"><div class="card-icon">☢️</div><h3>Nuclear &amp; Particle Physics</h3><p>Pelletron accelerator operation, radioactivity, radiation detectors, particle beam physics.</p><span class="card-tag">Physics</span></div>
+    <div class="card"><div class="card-icon">🤖</div><h3>Machine Learning</h3><p>Scikit-learn, supervised &amp; unsupervised pipelines, statistical inference on physics datasets.</p><span class="card-tag gold">AI / ML</span></div>
+    <div class="card"><div class="card-icon">🧠</div><h3>Deep Learning</h3><p>Neural networks, CNNs, feature extraction from high-dimensional sensor data, model benchmarking.</p><span class="card-tag gold">AI / DL</span></div>
+    <div class="card"><div class="card-icon">👁️</div><h3>Computer Vision</h3><p>Visual AI systems, object detection, image processing, and intelligent data pipelines in Python.</p><span class="card-tag purple">AI / CV</span></div>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <p class="section-tag">Explore</p>
+  <h2 class="section-title">All <span>Pages</span></h2>
+  <div class="pages-grid">
+    <a class="page-link" href="about.html">👤 About Me <span class="arrow">→</span></a>
+    <a class="page-link" href="physics.html">⚛️ Physics Projects <span class="arrow">→</span></a>
+    <a class="page-link" href="aiml.html">🤖 AI / ML Projects <span class="arrow">→</span></a>
+    <a class="page-link" href="research.html">📄 Research &amp; Notes <span class="arrow">→</span></a>
+    <a class="page-link" href="skills.html">🛠️ Skills <span class="arrow">→</span></a>
+    <a class="page-link" href="blog.html">✍️ Blog <span class="arrow">→</span></a>
+    <a class="page-link" href="contact.html">📬 Contact <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 <a href="index.html">Muhammad Abid</a> · Physics &amp; AI Researcher · Gujranwala, Pakistan</p>
+  <div class="footer-links">
+    <a href="mailto:muhammadabid7797990@gmail.com">Email</a>
+    <a href="https://www.linkedin.com/feed/" target="_blank">LinkedIn</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</footer>
+<script src="stars.js"></script>
+</body>
+</html>

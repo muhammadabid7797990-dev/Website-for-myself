@@ -1,0 +1,6 @@
+bash
+
+rm /mnt/user-data/outputs/index.html
+Output
+
+exit code 0
