@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact — Muhammad Abid</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .contact-grid {
+      display:grid; grid-template-columns:1fr 1.4fr; gap:3rem;
+      align-items:start;
+    }
+    .availability-badge {
+      display:inline-flex; align-items:center; gap:8px;
+      background:rgba(93,222,122,0.10); border:1px solid rgba(93,222,122,0.25);
+      color:#5dde7a; font-size:0.78rem; letter-spacing:0.08em;
+      padding:6px 16px; border-radius:40px;
+      font-family:'Space Mono',monospace; margin-bottom:1.4rem;
+    }
+    .availability-badge::before {
+      content:''; width:7px; height:7px;
+      background:#5dde7a; border-radius:50%;
+      animation:pulse 2s infinite;
+    }
+    .social-row { display:flex; gap:0.8rem; flex-wrap:wrap; margin-top:1.5rem; }
+    .social-btn {
+      display:inline-flex; align-items:center; gap:8px;
+      background:rgba(0,180,255,0.06); border:1px solid rgba(0,180,255,0.2);
+      border-radius:8px; padding:10px 18px;
+      color:var(--electric); text-decoration:none;
+      font-size:0.84rem; font-family:'Space Mono',monospace;
+      transition:background 0.2s, box-shadow 0.2s;
+    }
+    .social-btn:hover {
+      background:rgba(0,180,255,0.14);
+      box-shadow:0 0 16px rgba(0,180,255,0.2);
+    }
+    @media(max-width:768px) {
+      .contact-grid { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+<canvas id="starfield"></canvas>
+
+<nav>
+  <a class="logo" href="index.html">Fusion<span>Abid</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="physics.html">Physics</a></li>
+    <li><a href="aiml.html">AI / ML</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-header">
+  <div class="badge">GET IN TOUCH</div>
+  <h1>Contact <span>Me</span></h1>
+  <p>Open to scholarships, research collaborations, academic opportunities, and scientific discussions.</p>
+</div>
+
+<section>
+  <div class="contact-grid">
+
+    <!-- ── LEFT: Contact Info ── -->
+    <div>
+      <div class="availability-badge">Available for Opportunities</div>
+
+      <p class="section-tag" style="margin-bottom:1rem;">Direct Contact</p>
+      <div class="info-list">
+
+        <!-- ✏️ EDIT: Update your contact details here -->
+        <div class="info-item">
+          <div class="info-icon">✉️</div>
+          <div>
+            <div class="info-label">EMAIL</div>
+            <div class="info-value"><a href="mailto:muhammadabid7797990@gmail.com">muhammadabid7797990@gmail.com</a></div>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">📞</div>
+          <div>
+            <div class="info-label">PHONE / WHATSAPP</div>
+            <div class="info-value"><a href="tel:+923225982690">(+92) 3225982690</a></div>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">📍</div>
+          <div>
+            <div class="info-label">LOCATION</div>
+            <div class="info-value">Gujranwala, Punjab · Pakistan (52200)</div>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">🔗</div>
+          <div>
+            <div class="info-label">LINKEDIN</div>
+            <div class="info-value"><a href="https://www.linkedin.com/feed/" target="_blank">linkedin.com/in/muhammadabid</a></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Social Links -->
+      <div class="social-row">
+        <a class="social-btn" href="mailto:muhammadabid7797990@gmail.com">✉️ Email</a>
+        <a class="social-btn" href="https://www.linkedin.com/feed/" target="_blank">🔗 LinkedIn</a>
+        <!-- ✏️ ADD: Add your GitHub link here when you create one -->
+        <!-- <a class="social-btn" href="https://github.com/yourusername" target="_blank">💻 GitHub</a> -->
+      </div>
+
+      <!-- What I'm open to -->
+      <div style="margin-top:2rem;">
+        <p class="section-tag" style="margin-bottom:1rem;">I'm Open To</p>
+        <div style="display:flex; flex-direction:column; gap:0.7rem;">
+          <div class="info-item" style="padding:0.8rem 1.2rem;">
+            <div class="info-icon" style="font-size:1.1rem;">🎓</div>
+            <div class="info-value" style="font-size:0.86rem;">International Scholarship Opportunities</div>
+          </div>
+          <div class="info-item" style="padding:0.8rem 1.2rem;">
+            <div class="info-icon" style="font-size:1.1rem;">🔬</div>
+            <div class="info-value" style="font-size:0.86rem;">Research Collaborations (Physics + AI)</div>
+          </div>
+          <div class="info-item" style="padding:0.8rem 1.2rem;">
+            <div class="info-icon" style="font-size:1.1rem;">💼</div>
+            <div class="info-value" style="font-size:0.86rem;">Research Assistant / Fellowship Positions</div>
+          </div>
+          <div class="info-item" style="padding:0.8rem 1.2rem;">
+            <div class="info-icon" style="font-size:1.1rem;">🤝</div>
+            <div class="info-value" style="font-size:0.86rem;">Scientific Discussions &amp; Academic Networking</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── RIGHT: Contact Form ── -->
+    <div>
+      <p class="section-tag" style="margin-bottom:1rem;">Send a Message</p>
+
+      <!-- ✏️ NOTE: This form needs a backend service (like Formspree.io) to actually send emails.
+           Steps:
+           1. Go to https://formspree.io and create a free account
+           2. Create a new form → you'll get a URL like: https://formspree.io/f/xxxxxxxx
+           3. Replace the action="#" below with that URL
+           4. The form will then email you every submission automatically.
+      -->
+      <form class="contact-form" action="#" method="POST">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">Your Name *</label>
+            <input type="text" id="fname" name="name" placeholder="Dr. Jane Smith" required/>
+          </div>
+          <div class="form-group">
+            <label for="femail">Email Address *</label>
+            <input type="email" id="femail" name="email" placeholder="jane@university.edu" required/>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="forg">Organisation / University</label>
+          <input type="text" id="forg" name="organisation" placeholder="e.g. MIT, CERN, University of X"/>
+        </div>
+
+        <div class="form-group">
+          <label for="fsubject">Subject *</label>
+          <input type="text" id="fsubject" name="subject" placeholder="e.g. Scholarship Opportunity / Research Collaboration" required/>
+        </div>
+
+        <div class="form-group">
+          <label for="fmsg">Message *</label>
+          <textarea id="fmsg" name="message" placeholder="Tell me about the opportunity, project, or what you'd like to discuss..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">⚡ Send Message</button>
+
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 <a href="index.html">Muhammad Abid</a> · Physics &amp; AI Researcher · Gujranwala, Pakistan</p>
+  <div class="footer-links">
+    <a href="mailto:muhammadabid7797990@gmail.com">Email</a>
+    <a href="https://www.linkedin.com/feed/" target="_blank">LinkedIn</a>
+  </div>
+</footer>
+<script src="stars.js"></script>
+</body>
+</html>
